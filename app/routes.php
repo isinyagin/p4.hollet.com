@@ -20,6 +20,7 @@ Route::get('/{any}', function() {
 	return "some url";
 });
 
+
 Route::post('/', function() {
 	$url = Input::get('url');
 	$record = Url::whereurl($url)->first();

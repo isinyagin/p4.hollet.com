@@ -16,7 +16,14 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('about', function()
-{
-	return View::make('about');
+Route::get('/{any}', function() {
+	return "some url";
+});
+
+Route::post('/', function() {
+	$url = Input::get('url');
+	$record = Url::whereurl($url)->first();
+	if ($record) 
+		return View::make('result')
+				->with('shortened', $record->shortened);
 });

@@ -51,13 +51,18 @@ return array(
 			'database' => __DIR__.'/../database/production.sqlite',
 			'prefix'   => '',
 		),
-
+/*
+ *getenv('DB_HOST')
+ *getenv('DB_NAME')
+ *getenv('DB_USER')
+ *getenv('DB_PASS')
+ */
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => getenv('DB_HOST'),
-			'database'  => getenv('DB_NAME'),
-			'username'  => getenv('DB_USER'),
-			'password'  => getenv('DB_PASS'),
+			'host'      => 'localhost',
+			'database'  => 'shortUrl',
+			'username'  => 'root',
+			'password'  => 'atikinn',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

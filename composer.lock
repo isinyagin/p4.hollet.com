@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "7a9c5192259a4f47de1b963c38bbfc95",
+    "hash": "e59835ded3ff29121214f9f466b11e40",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1610,6 +1610,52 @@
                 "laravel"
             ],
             "time": "2013-12-14 04:48:56"
+        },
+        {
+            "name": "zeroclipboard/zeroclipboard",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zeroclipboard/zeroclipboard.git",
+                "reference": "e9cae00e5ea912f52513e1f6dd1e2f6c3b39aec0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zeroclipboard/zeroclipboard/zipball/e9cae00e5ea912f52513e1f6dd1e2f6c3b39aec0",
+                "reference": "e9cae00e5ea912f52513e1f6dd1e2f6c3b39aec0",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jon Rohan",
+                    "homepage": "http://jonrohan.me/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "James M. Greene",
+                    "email": "james.m.greene@gmail.com",
+                    "homepage": "http://jamesgreene.net/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The ZeroClipboard library provides an easy way to copy text to the clipboard using an invisible Adobe Flash movie and a JavaScript interface.",
+            "homepage": "http://zeroclipboard.org/",
+            "keywords": [
+                "clip",
+                "clipboard",
+                "clippy",
+                "copy",
+                "cut",
+                "flash",
+                "paste",
+                "zclip"
+            ],
+            "time": "2013-12-04 12:01:12"
         }
     ],
     "packages-dev": [
@@ -1620,7 +1666,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "way/generators": 20
+        "way/generators": 20,
+        "zeroclipboard/zeroclipboard": 20
     },
     "platform": [
 

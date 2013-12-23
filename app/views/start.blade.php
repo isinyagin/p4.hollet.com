@@ -2,8 +2,8 @@
 
 @section ('content')
 	<h1>Shorten your URL</h1>
-	<h3>Enter the URL and press Enter</h3>
 	{{ Form::open() }}
+		{{ Form::label('url', 'Enter URL and press Enter') }}
 		{{ Form::text('url') }}	
 	{{ Form::close() }}
 

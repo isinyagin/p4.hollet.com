@@ -9,5 +9,7 @@
 	<div id='container'>
 		@yield('content')
 	</div>
+	{{ HTML::script('assets/js/ZeroClipboard.js') }}
+	{{ HTML::script('assets/js/clip.js') }}
 </body>
 </html>

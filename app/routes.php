@@ -11,20 +11,35 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+Route::get('/', function() {
+	return View::make('start');
 });
 
-Route::get('/{any}', function() {
-	return "some url";
-});
+Route::get('/{any}', function($shortened) {
+	// query the database for the record with $shortened
+	$row = Url::whereshortened($shortened)->first();
+	
+	// not found -> redirect to home
+	if (is_null($row)) return Redirect::to('/');
 
+	// redirect to the full url
+	return Redirect::to($row->url);
+});
 
 Route::post('/', function() {
+	// get user input
 	$url = Input::get('url');
+
+	// validate user input via URL model class
+	$valid = Url::validate(['url' => $url]);
+	if ($valid !== true) return Redirect::to('/')->witherrors($valid->messages());
+
+	// check if the record already exists in the database via URL model class
 	$record = Url::whereurl($url)->first();
-	if ($record) 
-		return View::make('result')
-				->with('shortened', $record->shortened);
+	if ($record) return View::make('result')->with('shortened', $record->shortened);
+
+	// add new record via URL model class
+	$result = Url::create(['url' => $url, 'shortened' => Url::generate_uniq_url()]);
+	if ($result) return View::make('result')->with('shortened', $result->shortened);
 });
+

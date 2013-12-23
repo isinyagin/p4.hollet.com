@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>iPasteBin</title>
+	<title>My Short URL</title>
+	{{ HTML::style('assets/css/main.css') }}
 </head>
 <body>
 	<div id='container'>

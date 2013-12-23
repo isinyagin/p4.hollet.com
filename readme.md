@@ -14,12 +14,11 @@ Goals (accomplished):
    principles, Composer package, Blade templating system
 3. get comfortable with PAAS deployment (first tried Heroku and PagodaBox, but
    php setup in both of them is pretty complicated or unstable)
-
-Pitfalls:
-1. The logic of the app is done in routers (didn't have enough time to wrap my
-   mind around controllers in laravel, they are rather complicated)
-2. javascript is minimal, since such app doesn't really require js. Validation
-   is done on the server side using Laravel Validator class
+4. javascript is minimal, since such app doesn't really require js. Validation
+   is done on the server side using Laravel Validator class. Jquery plugin is
+   used to copy the result url into clipboard
+5. sql dump is stored in assets folder, it contains queries for two tables:
+   laravel's migrations and the actual table with data (urls).
 
 The actual files are inside the app folder and public files are in
 public/assets
